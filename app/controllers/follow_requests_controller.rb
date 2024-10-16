@@ -54,6 +54,9 @@ class FollowRequestsController < ApplicationController
     respond_to do |format|
       format.html { redirect_back fallback_location: root_url, notice: "Follow request was successfully destroyed." }
       format.json { head :no_content }
+      format.js do
+        render template: "follow_requests/destroy"
+      end
     end
   end
 
