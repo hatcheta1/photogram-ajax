@@ -1,0 +1,1 @@
+$("<%= j(render "follow_requests/form", follow_request: @follow_request) %>").replaceWith("#<%= dom_id(@follow_request.recipient) %>_new_follow_request")
