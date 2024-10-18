@@ -1,4 +1,4 @@
-  <div id="<%= dom_id(follow_request.recipient) %>_new_follow_request">
+  <div id="<%= dom_id(follow_request.recipient) %>">
   <%= form_with(model: follow_request, class: "d-inline-block", local: false) do |form| %>
   <% if follow_request.errors.any? %>
     <div id="error_explanation">
