@@ -22,7 +22,7 @@ class FollowRequestsController < ApplicationController
   # POST /follow_requests or /follow_requests.json
   def create
     @follow_request = FollowRequest.new(follow_request_params)
-    @follow_request.sender = current_user
+    @follow_request.sender_id = current_user.id
 
     respond_to do |format|
       if @follow_request.save
